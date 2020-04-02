@@ -1,0 +1,72 @@
+#mapid {
+    width: 100%;
+    max-width: 100%;
+    max-height: calc(100vh - 100px);
+    height: calc(100vh - 100px);
+}
+
+.mapa{
+   margin: 20px;
+   padding: 20px; 
+}
+
+.nomeRegional {
+  color: black;
+  margin: 20px;
+  padding: 20px;
+  font-size: medium;
+}
+
+.populacao {
+   font-size: medium;
+   color: green; 
+   margin: 5px;
+   padding: 5px; 
+}
+
+.lista-detalhes-casos{
+   height:50px; 
+   overflow:hidden; 
+   overflow-y:scroll;
+}
+
+.selecao{
+   padding: 5px; 
+   margin: 5px;
+   display:block;
+}
+
+.detalhesCasos{
+   padding: 20px; 
+   margin: 20px;
+}
+
+
+
+.cincoporcento {
+    font-size: medium;
+    color: red;  
+    margin: 5px;
+    padding: 5px; 
+ 
+ }
+
+
+.leitosUTI {
+    font-size: medium;
+    color: red; 
+    margin: 5px;
+    padding: 5px; 
+  
+ }
+
+ .respiradores {
+    font-size: medium;
+    color: red; 
+    margin: 5px;
+    padding: 5px; 
+  
+ }
+
+
+

@@ -22,11 +22,12 @@
 
 <body>
     <div class="selecao">
-        <h4>Qual seu município?</h4>
-        <label for="#muncipio_id"></label>
-        <select name="municipio" id="municipio_id" class="selectpicker" data-live-search="true" onchange="selecionaMunicipio(this);">
-
-        </select>
+        <form autocomplete="off" onsubmit="event.preventDefault(); selecionaMunicipio();">
+            <div class="autocomplete" style="width:300px;">
+              <input id="municipio_id" type="text" name="municipio" placeholder="Qual seu município?">
+            </div>
+            <input type="submit" value="Buscar Regional">
+          </form>
     </div>
     <div id="mapid" class=></div>
     <div class="selecao">
@@ -51,7 +52,12 @@
     
     <script src="js/papaparse.js"></script>
     <script src="js/mapa.js"></script>
-
+    <script src="js/autocomplete.js"></script>
+    
+    <script>
+        setup();
+        autocomplete(document.getElementById("municipio_id"), municipios);
+    </script>
 </body>
 
 </html>

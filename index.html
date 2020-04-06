@@ -12,8 +12,10 @@
 
     <link rel="stylesheet" href="https://leaflet.github.io/Leaflet.markercluster/dist/MarkerCluster.css" />
     <link rel="stylesheet" href="https://leaflet.github.io/Leaflet.markercluster/dist/MarkerCluster.Default.css" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
     <link rel="stylesheet" href="css/estilo.css" />
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 
 
 
@@ -21,42 +23,74 @@
 </head>
 
 <body>
-    <div class="selecao">
-        <form autocomplete="off" onsubmit="event.preventDefault(); selecionaMunicipio();">
-            <div class="autocomplete" style="width:300px;">
-              <input id="municipio_id" type="text" name="municipio" placeholder="Qual seu município?">
-            </div>
-            <input type="submit" value="Buscar Regional">
-          </form>
+    <div class="row no-gutters d-flex justify-content-center align-items-center">
+        <h1>Dados Covid-19 - Regionais de Saúde do Paraná</h1>
     </div>
-    <div id="mapid" class=></div>
-    <div class="selecao">
-        Fontes de dados: 
-        <ul>
-            <li>Número de Leitos e Equipamentos: Banco de dados do Sistema Único de Saúde - <a href="http://www2.datasus.gov.br/DATASUS/index.php?area=02" target="_blank">DATASUS</a>,
-                Cadastro Nacional de Estabelecimentos de Atenção à Saúde - CNES. Referente fev 2020.</li>
-            <li>Número de Casos: <a href="https://github.com/wcota/covid19br" target="_blank">Confirmed cases of COVID-19 in Brazil</a></li>
-            </ul>
-    </div>
+    <div class="row no-gutters">
+        <div class="col no-gutters">
 
+            <div class="mapa">
+                <div class="selecao">
+                    <form autocomplete="off" onsubmit="event.preventDefault(); selecionaMunicipio();">
+                        <div class="autocomplete" style="width:300px;">
+                            <input id="municipio_id" type="text" name="municipio" placeholder="Qual seu município?">
+                        </div>
+                        <input type="submit" value="Buscar Regional">
+                    </form>
+                </div>
+                <div id="mapid" class=></div>
+
+            </div>
+
+        </div>
+    </div>
+    <div class="row no-gutters">
+        <div class="selecao">
+            Fontes de dados:
+            <ul>
+                <li>Número de Leitos e Equipamentos: Banco de dados do Sistema Único de Saúde - <a
+                        href="http://www2.datasus.gov.br/DATASUS/index.php?area=02" target="_blank">DATASUS</a>,
+                    Cadastro Nacional de Estabelecimentos de Atenção à Saúde - CNES. Referente fev 2020.</li>
+                <li>Número de Casos: <a href="https://github.com/wcota/covid19br" target="_blank">Confirmed
+                        cases of
+                        COVID-19 in Brazil</a></li>
+            </ul>
+        </div>
+    </div>
     <script src="https://unpkg.com/leaflet@1.6.0/dist/leaflet.js"
-    integrity="sha512-gZwIG9x3wUXg2hdXF6+rVkLF/0Vi9U8D2Ntg4Ga5I5BZpVkVxlJWbSQtXPSiUTtC0TjtGOmxa1AJPuV0CPthew=="
-    crossorigin=""></script>
+        integrity="sha512-gZwIG9x3wUXg2hdXF6+rVkLF/0Vi9U8D2Ntg4Ga5I5BZpVkVxlJWbSQtXPSiUTtC0TjtGOmxa1AJPuV0CPthew=="
+        crossorigin=""></script>
     <script src="https://leaflet.github.io/Leaflet.markercluster/dist/leaflet.markercluster-src.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet-ajax/2.1.0/leaflet.ajax.js"></script>
-    <!--<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
-    -->
-    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+        crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+        crossorigin="anonymous"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@2.9.3/dist/Chart.min.js"></script>
+ 
+    <script src="js/classes.js"></script>
+    <script src="js/dados.js"></script>
     
+    <script src="js/utils.js"></script>
     <script src="js/papaparse.js"></script>
     <script src="js/mapa.js"></script>
     <script src="js/autocomplete.js"></script>
-    
+    <script src="js/graficos.js"></script>
+
     <script>
-        setup();
-        autocomplete(document.getElementById("municipio_id"), municipios);
+        window.onload = ()=>{
+            setup().then(()=>{
+                autocomplete(document.getElementById("municipio_id"), municipios);
+            });
+        }
+        
     </script>
 </body>
 

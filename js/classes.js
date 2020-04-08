@@ -77,7 +77,7 @@ class Regional {
     geraTexto() {
         var texto = '<div class="nomeRegional">' + this.nomeRegional + '</div>';
         texto += '<div class="populacao">População total: ' + this.populacaoTotal.toLocaleString() + ' habitantes</div>';
-        texto += '<div class="cincoporcento">5%: ' + (Math.round(this.populacaoTotal * 0.1 * 0.05)).toLocaleString() + ' pacientes</div>';
+        texto += '<div class="cincoporcento">Possíveis casos graves: ' + (Math.round(this.populacaoTotal * 0.1 * 0.05)).toLocaleString() + ' pacientes</div>';
         texto += '<div class="leitosUTI">Leitos de UTI: ' + this.totalUTI.toLocaleString() + '</div>';
         texto += '<div class="respiradores">Total de Respiradores: ' + this.totalRespiradores.toLocaleString() + '</div>';
 

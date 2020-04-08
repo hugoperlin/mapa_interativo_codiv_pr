@@ -1,29 +1,40 @@
 #mapid {
-    width: 100%;
-    max-width: 100%;
-    max-height: calc(100vh - 100px);
-    height: calc(100vh - 100px);
+    width: 50%;
+    max-width: 50%;
+    max-height: calc(70vh - 100px);
+    height: calc(70vh - 100px);
     z-index: 0;
 }
 
+@media only screen and (max-width: 600px) {
+  #mapid {
+    width: 90%;
+    max-width: 90%;
+    max-height: calc(100vh - 100px);
+    height: calc(100vh - 100px);
+    z-index: 0;
+    
+}
+}
 
 .mapa{
-   margin: 20px;
-   padding: 20px; 
+  display: flex;
+  flex-wrap: wrap;
+  align-content: center;
 }
 
 .nomeRegional {
   color: black;
-  margin: 20px;
-  padding: 20px;
+  margin: 5px;
+  padding: 5px;
   font-size: medium;
 }
 
 .populacao {
    font-size: medium;
    color: green; 
-   margin: 5px;
-   padding: 5px; 
+   margin: 2px;
+   padding: 2px; 
 }
 
 .lista-detalhes-casos{
@@ -43,13 +54,11 @@
    margin: 20px;
 }
 
-
-
 .cincoporcento {
     font-size: medium;
     color: red;  
-    margin: 5px;
-    padding: 5px; 
+    margin: 2px;
+    padding: 2px; 
  
  }
 
@@ -57,23 +66,19 @@
 .leitosUTI {
     font-size: medium;
     color: red; 
-    margin: 5px;
-    padding: 5px; 
+    margin: 2px;
+    padding: 2px; 
   
  }
 
  .respiradores {
     font-size: medium;
     color: red; 
-    margin: 5px;
-    padding: 5px; 
+    margin: 2px;
+    padding: 2px; 
   
  }
 
- * { box-sizing: border-box; }
- body {
-   font: 16px Arial;
- }
  .autocomplete {
    /*the container must be positioned relative:*/
    position: relative;

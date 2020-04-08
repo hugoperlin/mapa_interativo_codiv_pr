@@ -23,39 +23,31 @@
 </head>
 
 <body>
-    <div class="row no-gutters d-flex justify-content-center align-items-center">
-        <h1>Dados Covid-19 - Regionais de Saúde do Paraná</h1>
-    </div>
-    <div class="row no-gutters">
-        <div class="col no-gutters">
+    <h1>Dados Covid-19 - Regionais de Saúde do Paraná</h1>
 
-            <div class="mapa">
-                <div class="selecao">
-                    <form autocomplete="off" onsubmit="event.preventDefault(); selecionaMunicipio();">
-                        <div class="autocomplete" style="width:300px;">
-                            <input id="municipio_id" type="text" name="municipio" placeholder="Qual seu município?">
-                        </div>
-                        <input type="submit" value="Buscar Regional">
-                    </form>
+    <div class="mapa">
+        <div class="row selecao">
+            <form autocomplete="off" onsubmit="event.preventDefault(); selecionaMunicipio();">
+                <div class="autocomplete" style="width:300px;">
+                    <input id="municipio_id" type="text" name="municipio" placeholder="Qual seu município?">
                 </div>
-                <div id="mapid" class=></div>
-
-            </div>
-
+                <input type="submit" value="Buscar Regional">
+            </form>
         </div>
+
+        <div id="mapid" class=""></div>
+
     </div>
-    <div class="row no-gutters">
-        <div class="selecao">
-            Fontes de dados:
-            <ul>
-                <li>Número de Leitos e Equipamentos: Banco de dados do Sistema Único de Saúde - <a
-                        href="http://www2.datasus.gov.br/DATASUS/index.php?area=02" target="_blank">DATASUS</a>,
-                    Cadastro Nacional de Estabelecimentos de Atenção à Saúde - CNES. Referente fev 2020.</li>
-                <li>Número de Casos: <a href="https://github.com/wcota/covid19br" target="_blank">Confirmed
-                        cases of
-                        COVID-19 in Brazil</a></li>
-            </ul>
-        </div>
+
+    <div class="selecao">
+        Fontes de dados:
+        <ul>
+            <li>Número de Leitos e Equipamentos: Banco de dados do Sistema Único de Saúde - <a
+                    href="http://www2.datasus.gov.br/DATASUS/index.php?area=02" target="_blank">DATASUS</a>,
+                Cadastro Nacional de Estabelecimentos de Atenção à Saúde - CNES. Referente fev 2020.</li>
+            <li>Número de Casos: <a href="https://brasil.io/dataset/covid19/caso" target="_blank">Brasil.io</a></li>
+        </ul>
+        <img src="https://hitcounter.pythonanywhere.com/count/tag.svg?url=http%3A%2F%2Finfopguaifpr.com.br%2Fdocentes%2Fhugo.perlin%2Fmapa_covid_pr%2F" alt="Hits">
     </div>
     <script src="https://unpkg.com/leaflet@1.6.0/dist/leaflet.js"
         integrity="sha512-gZwIG9x3wUXg2hdXF6+rVkLF/0Vi9U8D2Ntg4Ga5I5BZpVkVxlJWbSQtXPSiUTtC0TjtGOmxa1AJPuV0CPthew=="
@@ -74,10 +66,10 @@
         crossorigin="anonymous"></script>
 
     <script src="https://cdn.jsdelivr.net/npm/chart.js@2.9.3/dist/Chart.min.js"></script>
- 
+
     <script src="js/classes.js"></script>
     <script src="js/dados.js"></script>
-    
+
     <script src="js/utils.js"></script>
     <script src="js/papaparse.js"></script>
     <script src="js/mapa.js"></script>
@@ -85,12 +77,12 @@
     <script src="js/graficos.js"></script>
 
     <script>
-        window.onload = ()=>{
-            setup().then(()=>{
+        window.onload = () => {
+            setup().then(() => {
                 autocomplete(document.getElementById("municipio_id"), municipios);
             });
         }
-        
+
     </script>
 </body>
 
